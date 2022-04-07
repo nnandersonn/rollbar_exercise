@@ -24,7 +24,12 @@ app.get('/', (req, res) => {
 
 app.get('/say-hi', (req, res)=> {
     res.send('I am so proud of you')
-    blank()
+    try{
+        notAFunction(res)
+    } catch {error}{
+        rollbar.log(error)
+    }
+    
 })
 
 const PORT = process.env.PORT || 4005
