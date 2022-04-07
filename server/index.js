@@ -28,6 +28,7 @@ app.get('/say-hi', (req, res)=> {
         notAFunction(res)
     } catch (error){
         rollbar.log(error)
+        Rollbar.critical('oopsy')
     }
     
 })
