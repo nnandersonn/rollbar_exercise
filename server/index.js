@@ -26,7 +26,7 @@ app.get('/say-hi', (req, res)=> {
     res.send('I am so proud of you')
     try{
         notAFunction(res)
-    } catch {error}{
+    } catch (error){
         rollbar.log(error)
     }
     
