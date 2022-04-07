@@ -3,6 +3,7 @@
 console.log('connected')
 
 const sayHiButton = document.querySelector('#say-hi-button')
+const textHolder = document.querySelector('#text-holder')
 
 function sayHi(){
     console.log('sayHi function triggered')
@@ -10,7 +11,7 @@ function sayHi(){
         console.log(res)
         let getText = document.createElement('p')
         getText.textContent = res.data
-        document.body.appendChild(getText)
+        textHolder.appendChild(getText)
     })
 
 }
