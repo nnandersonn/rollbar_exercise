@@ -6,7 +6,7 @@ const sayHiButton = document.querySelector('#say-hi-button')
 
 function sayHi(){
     console.log('sayHi function triggered')
-    axios.get('http://localhost:3000/say-hi').then((res) => {
+    axios.get('/say-hi').then((res) => {
         console.log(res)
         let getText = document.createElement('p')
         getText.textContent = res.data
